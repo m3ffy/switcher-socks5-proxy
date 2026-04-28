@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <header>
+      <h3>m3ffy proxy</h3>
+      <div id="status-dot" class="dot"></div>
+    </header>
+
+    <div class="input-group">
+      <label for="proxyList">Список прокси (ip:port)</label>
+      <textarea id="proxyList" placeholder="192.168.1.1:1080..."></textarea>
+    </div>
+
+    <div class="actions">
+      <button id="setProxy" class="btn-primary">
+        <span>Сменить</span>
+      </button>
+      <button id="clearProxy" class="btn-outline">Выключить</button>
+    </div>
+
+    <footer>
+      <div class="info-row">
+        <span class="label">Статус:</span>
+        <span id="status-text">Ожидание</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Пинг:</span>
+        <span id="ping-text">—</span>
+      </div>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

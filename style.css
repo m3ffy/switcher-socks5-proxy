@@ -1,0 +1,108 @@
+:root {
+  --primary: #009b22;
+  --primary-hover: #00ffae;
+  --bg: #000000;
+  --text-main: #bdbdbd;
+  --text-muted: #bdbdbd;
+  --border: #ff0000;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+}
+
+body {
+  width: 320px;
+  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: #373737;
+  color: var(--text-main);
+}
+
+.card {
+  background: var(--bg);
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+h3 { margin: 0; font-size: 1.1rem; font-weight: 600; }
+
+.dot {
+  width: 10px; height: 10px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.dot.active { background: var(--success); box-shadow: 0 0 8px var(--success); }
+
+.input-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+textarea:focus { border-color: var(--primary); }
+
+.actions { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+
+button {
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: var(--primary-hover); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.btn-outline:hover { background: #f9fafb; color: var(--danger); border-color: var(--danger); }
+
+footer {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.label { color: var(--text-muted); }
+
+#ping-text { font-weight: bold; }
+
+.loading { opacity: 0.5; pointer-events: none; }
